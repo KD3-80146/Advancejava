@@ -1,0 +1,25 @@
+package com.sunbeam.dao;
+import com.sunbem.dbutil.*;
+import java.sql.Connection;
+import java.sql.SQLException;
+
+public class Dao {
+   
+protected Connection con;
+	
+	public Dao() throws SQLException 
+	{
+		con=DbUtil.getConnection();
+	}
+	
+	@Override
+	public void close() {
+		try {
+			if(con != null)
+				con.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+}

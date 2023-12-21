@@ -1,0 +1,32 @@
+
+Dec 20, 2023 14:58:26.101 NEW SESSION
+Dec 20, 2023 14:58:26.101 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+Dec 20, 2023 15:17:57.222 NEW SESSION
+Dec 20, 2023 15:17:57.222 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Dec 20, 2023 16:31:19.543 [2268:2692:1220/163119.543:ERROR:connection_factory_impl.cc(471)] ConnectionHandler failed with net error: -2
+Dec 20, 2023 16:50:06.655 [2268:4392:1220/165006.655:ERROR:device_event_log_impl.cc(192)] [16:50:06.661] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: Element not found. (0x490)
+Dec 20, 2023 16:52:56.625 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Dec 20, 2023 17:50:50.169 [6536:2356:1220/175050.168:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Dec 20, 2023 17:51:22.344 [6536:2356:1220/175122.342:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Dec 20, 2023 17:53:58.976 [6536:2356:1220/175358.974:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Dec 20, 2023 17:54:29.366 [6536:2356:1220/175429.365:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Dec 20, 2023 17:55:23.918 [6536:2356:1220/175523.917:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Dec 20, 2023 17:56:02.451 [6536:2356:1220/175602.451:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -105
+Dec 20, 2023 17:56:07.528 [6536:2356:1220/175607.527:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Dec 20, 2023 17:56:42.951 [6536:2356:1220/175642.951:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Dec 20, 2023 18:50:40.863 [6536:2356:1220/185040.863:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Dec 20, 2023 18:50:56.728 [6536:2356:1220/185056.728:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -105
+Dec 20, 2023 18:51:01.807 [6536:2356:1220/185101.807:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Dec 20, 2023 19:40:24.981 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Dec 20, 2023 21:00:13.816 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Dec 20, 2023 21:58:52.545 [3664:17144:1220/215852.543:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Dec 20, 2023 21:59:25.704 [3664:17144:1220/215925.703:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Dec 20, 2023 22:00:20.848 [3664:17144:1220/220020.848:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -105
+Dec 20, 2023 23:33:44.913 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Dec 20, 2023 23:41:02.937 [13968:11364:1220/234102.936:ERROR:connection_factory_impl.cc(471)] ConnectionHandler failed with net error: -2
+Dec 20, 2023 23:43:01.657 [13968:17816:1220/234301.656:ERROR:device_event_log_impl.cc(192)] [23:43:01.656] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: Element not found. (0x490)
+Dec 20, 2023 23:44:38.43 [13968:11364:1220/234438.043:ERROR:connection_factory_impl.cc(471)] ConnectionHandler failed with net error: -2
+Dec 20, 2023 23:49:17.844 [13968:17816:1220/234917.844:ERROR:device_event_log_impl.cc(192)] [23:49:17.844] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: Element not found. (0x490)
+Dec 20, 2023 23:49:19.244 [13968:11364:1220/234919.244:ERROR:connection_handler_impl.cc(472)] Timed out waiting for GCM Protocol buffer.
+Dec 20, 2023 23:49:19.244 [13968:11364:1220/234919.244:ERROR:connection_factory_impl.cc(471)] ConnectionHandler failed with net error: -7
