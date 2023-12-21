@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="org.apache.jasper.tagplugins.jstl.core.Catch"/>
+    <fullyQualifiedTypeName name="com.sunbeam.beans.RegisterBean"/>
+    <fullyQualifiedTypeName name="com.sunbeam.dao.UserDao"/>
+    <fullyQualifiedTypeName name="com.sunbeam.dao.UserDaoImp"/>
+    <fullyQualifiedTypeName name="com.sunbeam.pojos.User"/>
+</qualifiedTypeNameHistroy>
