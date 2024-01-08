@@ -1,0 +1,101 @@
+package com.app.pojos;
+
+import javax.persistence.*;
+
+@Entity
+public class Team {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="team_id")
+   private Integer teamId;
+	@Column(length=20)
+   private String name;
+	@Column(length=20)
+   private String abbrevation;
+	@Column(length=20)
+   private String owner;
+	@Column(name="max_age",length=40)
+   private int maxAge;
+	@Column(name="batting_ayg")
+   private double battingAvg;
+	@Column(name="wickets_taken")
+   private int wicketsTaken;
+	
+	public Team() {
+		
+	}
+	
+	
+
+	public Team(String name, String abbrevation, String owner, int maxAge, double battingAvg, int wicketsTaken) {
+		super();
+		this.name = name;
+		this.abbrevation = abbrevation;
+		this.owner = owner;
+		this.maxAge = maxAge;
+		this.battingAvg = battingAvg;
+		this.wicketsTaken = wicketsTaken;
+	}
+
+
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getAbbrevation() {
+		return abbrevation;
+	}
+
+	public void setAbbrevation(String abbrevation) {
+		this.abbrevation = abbrevation;
+	}
+
+	public String getOwner() {
+		return owner;
+	}
+
+	public void setOwner(String owner) {
+		this.owner = owner;
+	}
+
+	public int getMaxAge() {
+		return maxAge;
+	}
+
+	public void setMaxAge(int maxAge) {
+		this.maxAge = maxAge;
+	}
+
+	public double getBattingAvg() {
+		return battingAvg;
+	}
+
+	public void setBattingAvg(double battingAvg) {
+		this.battingAvg = battingAvg;
+	}
+
+	public int getWicketsTaken() {
+		return wicketsTaken;
+	}
+
+	public void setWicketsTaken(int wicketsTaken) {
+		this.wicketsTaken = wicketsTaken;
+	}
+
+	@Override
+	public String toString() {
+		return "Team [teamId=" + teamId + ", name=" + name + ", abbrevation=" + abbrevation + ", owner=" + owner
+				+ ", maxAge=" + maxAge + ", battingAvg=" + battingAvg + ", wicketsTaken=" + wicketsTaken + "]";
+	}
+	
+	
+	
+	
+	
+	
+}

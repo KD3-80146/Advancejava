@@ -1,0 +1,102 @@
+package com.sunbeam.dao.moviedao;
+
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.sunbeam.dao.Dao;
+import com.sunbeam.dao.ReviewDao;
+import com.sunbeam.pojo.Review;
+
+public class ReviewDaoImp extends Dao implements ReviewDao {
+
+	public ReviewDaoImp() throws SQLException {
+		super();
+		
+	}
+
+	
+
+	@Override
+	public int save(Review r) throws Exception {
+		int count=0;
+		String sql="insert into reviews values(default,?,?,?,?,?)";
+		try(PreparedStatement ps =con.prepareStatement(sql))
+		{
+			ps.setInt(1,r.getMovie_id());
+			ps.setString(2, r.getReview());
+			ps.setInt(3, r.getRating());
+			ps.setInt(4, r.getUser_id());
+			SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+			java.util.Date date = sdf.parse(r.getModified());
+			java.sql.Date sDate = new java.sql.Date( date.getTime() );
+			ps.setDate(5, sDate);
+	        count=ps.executeUpdate();
+		
+
+
+			
+		}
+		return count;
+	}
+
+	@Override
+	public int update(Review r) throws Exception {
+		int count=0;
+		String sql="update reviews set movie_id=? ,review=?,rating=?,user_id=?, modified =? where review_id=?";
+		try(PreparedStatement ps=con.prepareStatement(sql)){
+			ps.setInt(1, r.getMovie_id());
+			ps.setString(2, r.getReview());
+			ps.setInt(3, r.getRating());
+			ps.setInt(4, r.getUser_id());
+			SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+			java.util.Date date = sdf.parse(r.getModified());
+			java.sql.Date sDate = new java.sql.Date( date.getTime() );
+			ps.setDate(5, sDate);
+			ps.setInt(6, r.getReview_id());
+			count=ps.executeUpdate();
+		}
+		
+		return count;
+	}
+
+	@Override
+	public List<Review> findAll() throws Exception {
+		List<Review> list=new ArrayList<Review>();
+		String sql="select * from reviews ";
+		return null;
+	}
+
+	@Override
+	public List<Review> findByUserId(int userId) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Review> getSharedWithUser(int userId) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Review findById(int id) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int deleteById(int reviewId) throws Exception {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int shareReview(int reviewId, int userId) throws Exception {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

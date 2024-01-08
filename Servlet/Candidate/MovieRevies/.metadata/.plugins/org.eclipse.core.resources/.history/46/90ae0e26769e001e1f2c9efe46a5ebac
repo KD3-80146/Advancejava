@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+  <form method="post" action="add">
+   First name : <input type="text" />
+   Last name : <input type="text" />
+   Email : <input type="email" />
+   Password : <input type="password" />
+   Mobile : <input type="number"/>
+   Date : <input type ="date"/>
+   <input type="submit"/>
+  </form>
+</body>
+</html>

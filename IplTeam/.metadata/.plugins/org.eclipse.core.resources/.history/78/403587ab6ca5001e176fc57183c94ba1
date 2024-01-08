@@ -1,0 +1,30 @@
+package com.app.dao;
+
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import com.app.pojos.Player;
+import com.app.pojos.Team;
+
+import static  utils.HibernateUtils.getFactory;
+
+
+public class PlayerDaoImpl implements PlayerDao {
+
+	@Override
+	public String addPlayer(Integer Team_id , Player newPlayer) {
+		
+		  Session session=getFactory().getCurrentSession();
+		  Transaction tx=session.beginTransaction();
+		  try {
+			   session.get(, session)
+			  tx.commit();
+		  }catch (RuntimeException e) {
+			  if(tx!=null)
+				  tx.rollback();
+			  throw e;
+		}
+		return msg;
+	}
+
+}

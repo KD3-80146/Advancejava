@@ -1,0 +1,34 @@
+package com.sunbeam.bean;
+
+import java.util.List;
+
+import com.sunbeam.daos.CandidateDao;
+import com.sunbeam.daos.CandidateDaoImpl;
+import com.sunbeam.pojos.Candidate;
+
+public class CandidateListBean {
+      private List<Candidate> candList;
+      
+      public CandidateListBean() {
+		
+	}
+
+	public List<Candidate> getCandlist() {
+		return candList;
+	}
+
+	public void setCandlist(List<Candidate> candList) {
+		this.candList = candList;
+	}
+      
+	public void fatchCandidateList()
+	{
+		try(CandidateDao candDao = new CandidateDaoImpl())
+		{
+			candList =candDao.findAll();			
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+      
+}

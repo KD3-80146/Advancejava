@@ -1,0 +1,30 @@
+package com.app.dao;
+
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import com.app.pojos.Team;
+
+import static  utils.HibernateUtils.getFactory;
+
+import java.io.Serializable;
+public class PlayerDaoImpl implements PlayerDao {
+
+	@Override
+	public String addPlayer(Team newTeam) {
+		String msg="Data is not upldate";
+		  Session session=getFactory().getCurrentSession();
+		  Transaction tx=session.beginTransaction();
+		  try {
+			 Serializable teamId=session.save(newTeam);
+			 msg="Data Send Done";
+			  tx.commit();
+		  }catch (RuntimeException e) {
+			  if(tx!=null)
+				  tx.rollback();
+			  throw e;
+		}
+		return msg;
+	}
+
+}

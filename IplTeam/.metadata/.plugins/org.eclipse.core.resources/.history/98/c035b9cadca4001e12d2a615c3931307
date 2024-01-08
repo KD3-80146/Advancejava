@@ -1,0 +1,90 @@
+package com.app.dao;
+import static utils.HibernateUtils.getFactory;
+
+import java.io.Serializable;
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import com.app.pojos.Team;
+
+public class TeamDaoImpl implements TeamDao {
+
+	@Override
+	public String addNewTeam(Team newTeam) {
+		
+		String msg="Data is Not Uploded";
+		  Session session=getFactory().getCurrentSession();
+		  Transaction tx=session.beginTransaction();
+		  try {
+			 Serializable teamId=session.save(newTeam);
+			  msg="Data is uploded and id is = "+teamId;
+			  tx.commit();
+		  }catch (RuntimeException e) {
+			  if(tx!=null)
+				  tx.rollback();
+			  throw e;
+		}
+		return msg;
+	}
+
+	@Override
+	public List<Team> displayTeamId() {
+		List<Team> list=null;
+		String jpql="select new com.app.pojos.Team(Id,abbreviation) from Team t";
+		Session session=getFactory().getCurrentSession();
+		Transaction tx=session.beginTransaction();
+		try {
+			list=session.createQuery(jpql,Team.class).getResultList();
+			System.out.println(list);
+			tx.commit();	
+		}catch (RuntimeException e) {
+			if(tx!=null)
+				tx.rollback();
+			throw e;
+				
+		}
+		return list;
+	}
+
+	@Override
+	public Team displayTeamById(Integer id) {
+		    Team team=null;
+		  Session session=getFactory().getCurrentSession();
+		  Transaction tx=session.beginTransaction();
+		  try {
+			  
+			  team=session.get(Team.class, id);
+			  
+			  tx.commit();
+		  }catch (RuntimeException e) {
+			 if(tx!=null)
+				 tx.rollback();
+			 throw e;
+		}
+		return team;
+	}
+
+	@Override
+	public List<Team> getTeamByMaxAgeWic(int age, int wicket) {
+		List<Team> list=null;
+		String jpql="select t from Team t where t.maxAge<:age and t.wicketsTaken>:wkts";
+		Session session=getFactory().getCurrentSession();
+		Transaction tx=session.beginTransaction();
+		try {
+		list=session.createQuery(jpql,Team.class).setParameter("age", age).setParameter("wkts", wicket).getResultList();
+			
+			tx.commit();
+		}catch (RuntimeException e) {
+			if(tx!=null)
+			{
+				tx.rollback();
+			}
+			throw e;
+		}
+		  
+		return list;
+	}
+
+}

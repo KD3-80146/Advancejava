@@ -1,0 +1,7 @@
+package com.app.dao;
+
+import com.app.pojos.Team;
+
+public interface TeamDao {
+     String addNewTeam(Team newTeam);
+}

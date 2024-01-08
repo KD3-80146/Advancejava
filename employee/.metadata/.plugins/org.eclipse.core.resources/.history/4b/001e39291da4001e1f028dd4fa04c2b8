@@ -1,0 +1,151 @@
+package com.sunbeam.dao;
+import static com.sunbeam.util.HibernateUtil.getFactory;
+
+import java.io.Serializable;import java.net.PortUnreachableException;
+import java.time.LocalDate;
+import java.util.List;
+
+import org.hibernate.*;
+
+import com.sunbeam.pojos.Employee;
+import com.sunbeam.pojos.EmploymentType;
+
+public class EmployeeDaoImpl implements EmployeeDao {
+
+	@Override
+	public String addEmployeeDetails(Employee newEmp) {
+		 String msg="Adding emp failed";
+		 Session session=getFactory().getCurrentSession();
+		 Transaction tx=session.beginTransaction();
+		 
+		 try {
+			 Serializable empId=session.save(newEmp);
+			 tx.commit();
+			 msg="Added emp detail with Id"+empId;
+			 
+		 }catch (RuntimeException e) {
+			if(tx!=null)
+			{
+				tx.rollback();
+			}
+			throw e;
+		}
+		return msg;
+	}
+
+	@Override
+	public Employee getEmployeeById(Integer empId) {
+		Employee emp=null;
+		 Session session =getFactory().getCurrentSession();
+		 Transaction tx= session.beginTransaction();
+		 try{
+			 emp=session.get(Employee.class,empId);
+			 
+		 }catch (RuntimeException e) {
+		     if(tx!=null)
+		     {
+		    	 tx.rollback();
+		     }
+		     throw e;
+		}
+		return emp;
+	}
+
+	@Override
+	public List<Employee> getAllEmps() {
+		List<Employee> list=null;
+		String jpql="select e from Employee e";
+		Session session=getFactory().getCurrentSession();
+		Transaction tx=session.beginTransaction();
+		try {
+			list=session.createQuery(jpql,Employee.class)
+					.getResultList();
+			
+		}catch (Exception e) {
+			if(tx!=null)
+				tx.rollback();
+			throw e;
+			
+		}
+		return list;
+	}
+
+	@Override
+	public List<Employee> getAllEmployeeByJoiningDate(LocalDate start, LocalDate end, double minSalary) {
+		  List<Employee> list=null;
+		  String jpql="select e from  Employee e where e.joinDate between :begin and :end and e.salary>:minSal";
+		  Session sdf=getFactory().getCurrentSession();
+		  Transaction tx =sdf.beginTransaction();
+		  try{
+			  list=sdf.createQuery(jpql,Employee.class).setParameter("begin",start).setParameter("end", end)
+					       .setParameter("minSal",minSalary).getResultList();
+			  
+			  tx.commit();
+		  }catch (RuntimeException e) {
+			if(tx!=null)
+				tx.rollback();
+			throw e;
+				
+		}
+		return list;
+	}
+
+	@Override
+	public List<String> getLastNameByEmpType(EmploymentType type) {
+		 List<String> string=null;
+		 String jpql="select e.lastName from Employee e where e.empType=:emptype";
+		 Session sdf=getFactory().getCurrentSession();
+		 Transaction tx=sdf.beginTransaction();
+		 try {
+			 string=sdf.createQuery(jpql,String.class).setParameter("emptype",type).getResultList();
+			 
+			 
+			 tx.commit();
+			 
+		 }catch (RuntimeException e) {
+			if(tx!=null)
+				tx.rollback();
+			throw e;
+		 
+		 }
+		 
+		return string;
+	}
+
+	@Override
+	public List<Employee> getAllEmployeeType(EmploymentType type) {
+		   List<Employee> list=null;
+		   String jpql="select new com.sunbeam.pojos.Employee(firstName,lastName,salary) from Employee e where e.empType=:type";
+		   Session session=getFactory().getCurrentSession();
+		   Transaction tx=session.beginTransaction();
+		   try {
+			   list=session.createQuery(jpql,Employee.class).setParameter("type", type).getResultList(); 
+			   tx.commit();
+		   }catch (RuntimeException e) {
+			  if(tx!=null)
+				  tx.rollback();
+			  throw e;
+		}
+		return list;
+	}
+
+	@Override
+	public String updateEmpSalary(String email, double SalIncrement) {
+		  Employee emp=null;
+		  String jpql="select e from Employee e where e.email=:em";
+		  Session session=getFactory().getCurrentSession();
+		  Transaction tx=session.beginTransaction();
+		  try {
+			  emp=session.createQuery(jpql,Employee.class).setParameter("em",email).getSingleResult();
+			  emp.setSalary(emp.getSalary()+SalIncrement);
+			  
+			  tx.commit();
+		  }catch (RuntimeException e) {
+			if(tx!=null)
+				tx.rollback();
+			throw e;
+		}
+		return null;
+	}
+
+}

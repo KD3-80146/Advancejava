@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+ Email: <input type="text" name="email" /> <br/>
+ Password:<input type ="password" name ="password"/><br/><br/>
+ <input type ="submit" value="login" /><br/><br/>
+ <a href="default.html">Sign up</a>
+
+</body>
+</html>

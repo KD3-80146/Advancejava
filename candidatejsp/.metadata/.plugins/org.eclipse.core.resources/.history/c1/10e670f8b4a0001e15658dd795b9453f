@@ -1,0 +1,19 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+  <div>
+     <form>
+        Email : <input type="text" name  name="email"/>
+        Password: <input type ="password" name="password"/>
+        <input type="submit" value="Sign in" />
+        <a href="Register.jsp" value="Signup" >SignUp</a>
+     </form>
+  </div>
+</body>
+</html>

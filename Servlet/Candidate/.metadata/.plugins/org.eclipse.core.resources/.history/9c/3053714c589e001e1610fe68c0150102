@@ -1,0 +1,7 @@
+package com.sunbeam.servlet;
+
+
+public class LoginServlet extends HttpServlet{
+	
+
+}

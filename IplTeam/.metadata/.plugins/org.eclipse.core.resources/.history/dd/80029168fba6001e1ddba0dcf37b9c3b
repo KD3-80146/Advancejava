@@ -1,0 +1,21 @@
+package com.app.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+//mandatory class level annot to tell Sc
+//following is a spring bean having req handling method
+//Singleton n eager
+public class HelloController {
+	public HelloController() {
+		System.out.println("in ctor of "+getClass());
+	}
+	//add a req handling method to display a welcome mesg
+	@RequestMapping("/hello")
+	public String sayHello() {
+		System.out.println("in say hello");
+		return "/welcome";
+	}
+
+}

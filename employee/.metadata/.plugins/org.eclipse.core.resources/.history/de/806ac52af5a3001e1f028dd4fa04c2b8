@@ -1,0 +1,26 @@
+package com.sunbeam.test;
+import static com.sunbeam.util.HibernateUtil.getFactory;
+
+import java.util.Scanner;
+
+import org.hibernate.SessionFactory;
+import static java.time.LocalDate.parse;
+import com.sunbeam.dao.EmployeeDaoImpl;
+
+public class GetEmployeeByJoiningDateAndSalary {
+	public static void main(String[] args)
+	{
+		Scanner sc= new Scanner(System.in);
+		try(SessionFactory sf= getFactory()){
+			EmployeeDaoImpl emp=new EmployeeDaoImpl();
+			System.out.println("Enter starting Date ,end Date min salary");
+			emp.getAllEmployeeByJoiningDate(parse(sc.next()), parse(sc.next()),
+					sc.nextDouble()).forEach(e->System.out.println(e));
+			
+			
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+}

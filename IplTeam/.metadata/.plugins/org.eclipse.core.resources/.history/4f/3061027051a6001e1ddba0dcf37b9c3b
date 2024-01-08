@@ -1,0 +1,13 @@
+package com.app.dao;
+
+import com.app.pojos.Owner;
+
+public class OwnerDaoImpl implements OwnerDao {
+
+	@Override
+	public String addownerDetail(Owner newOwner) {
+		  
+		return null;
+	}
+
+}

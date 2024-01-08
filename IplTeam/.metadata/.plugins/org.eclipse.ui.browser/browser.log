@@ -1,0 +1,27 @@
+
+Dec 27, 2023 16:31:07.134 NEW SESSION
+Dec 27, 2023 16:31:07.134 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Dec 27, 2023 16:49:09.863 [19476:2692:1227/164909.863:ERROR:connection_factory_impl.cc(471)] ConnectionHandler failed with net error: -2
+Dec 27, 2023 17:13:29.666 [19476:21740:1227/171329.666:ERROR:device_event_log_impl.cc(192)] [17:13:29.665] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: Element not found. (0x490)
+Dec 27, 2023 17:13:29.809 [19476:2692:1227/171329.808:ERROR:connection_factory_impl.cc(471)] ConnectionHandler failed with net error: -2
+Dec 27, 2023 17:13:31.920 [19476:2692:1227/171331.920:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Dec 27, 2023 17:13:32.425 [19476:2692:1227/171332.425:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+
+Dec 28, 2023 14:06:36.663 NEW SESSION
+Dec 28, 2023 14:06:36.663 [19980:18584:1228/140636.661:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Dec 28, 2023 14:06:36.665 [19980:18584:1228/140636.663:ERROR:checkin_request.cc(243)] Check-in request got net error: -106
+Dec 28, 2023 14:06:37.506 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Dec 28, 2023 14:07:01.839 [19980:18584:1228/140701.839:ERROR:checkin_request.cc(243)] Check-in request got net error: -106
+Dec 28, 2023 14:07:02.754 [19980:18584:1228/140702.754:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Dec 28, 2023 14:07:31.482 [19980:18584:1228/140731.482:ERROR:connection_factory_impl.cc(471)] ConnectionHandler failed with net error: -2
+Dec 28, 2023 14:07:54.490 [19980:18584:1228/140754.490:ERROR:checkin_request.cc(243)] Check-in request got net error: -105
+Dec 28, 2023 14:07:59.567 [19980:18584:1228/140759.567:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Dec 28, 2023 14:09:23.477 [19980:18584:1228/140923.477:ERROR:checkin_request.cc(243)] Check-in request got net error: -106
+Dec 28, 2023 14:12:43.597 [19980:18584:1228/141243.593:ERROR:checkin_request.cc(243)] Check-in request got net error: -106
+Dec 28, 2023 14:13:54.403 [19980:18584:1228/141354.400:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -105
+Dec 28, 2023 14:14:01.765 [19980:18584:1228/141401.765:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -105
+Dec 28, 2023 14:14:10.192 [19980:18584:1228/141410.192:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -105
+Dec 28, 2023 14:14:14.678 [19980:18584:1228/141414.678:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -105
+Dec 28, 2023 14:14:23.141 [19980:18584:1228/141423.137:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Dec 28, 2023 14:14:25.06 [19980:15696:1228/141425.006:ERROR:device_event_log_impl.cc(192)] [14:14:25.005] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: Element not found. (0x490)
+Dec 28, 2023 14:18:18.655 [19980:15696:1228/141818.655:ERROR:device_event_log_impl.cc(192)] [14:18:18.655] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: Element not found. (0x490)

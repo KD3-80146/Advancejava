@@ -1,0 +1,65 @@
+package com.sunbeam.dao;
+
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.sunbeam.pojo.Movie;
+
+public class MovieDaoImp extends Dao implements MovieDao {
+
+	public MovieDaoImp() throws SQLException {
+	}
+	
+	@Override
+	public List<Movie> findAll() throws Exception {
+	    List<Movie> list=new ArrayList<Movie>();
+	    String sql="Select * from movies";
+	      try( PreparedStatement ps=con.prepareStatement(sql)){
+	    	  try(ResultSet rs= ps.executeQuery()){
+	    		   while(rs.next()) {
+	    			   int movies_id =rs.getInt("movie_id");
+	    			   String titte =rs.getString("title");
+	    			   java.sql.Date sDate = rs.getDate("release_date");
+	    			   java.util.Date uDate = new java.util.Date( sDate.getTime());
+				        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+				        String str = sdf.format(uDate);
+				        Movie m=new Movie(movies_id, titte, str);
+				        list.add(m);
+	    	
+	    		   }
+	    	  }//rs.close;
+	      }//ps.close;
+		return list;
+	}
+
+	@Override
+	public Movie findById(int id) throws Exception {
+		Movie m =null;
+	 String sql="Select * from movies where movie_id = ?";
+	 try(PreparedStatement ps=con.prepareStatement(sql)){
+		 ps.setInt(1, id);
+		 try(ResultSet rs =ps.executeQuery()){
+			while(rs.next())
+			{
+				int movie_id=rs.getInt("movie_id");
+				String title=rs.getString("title");
+				java.sql.Date sdate=rs.getDate("release_date");
+				java.util.Date udate=new java.util.Date(sdate.getTime());
+				SimpleDateFormat stf=new SimpleDateFormat("dd-MM-yyyy");
+				String date=stf.format(udate);
+				 m=new Movie(movie_id, title, date);
+					
+			}
+		 }//rs.close
+	 }//ps.close;
+		return m;
+	}
+
+	
+    
+
+}

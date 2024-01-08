@@ -1,0 +1,10 @@
+package com.sunbeam.test;
+
+import org.hibernate.Session;
+
+public class Tester {
+   public static void main(String[] args) {
+
+ 	
+}
+}

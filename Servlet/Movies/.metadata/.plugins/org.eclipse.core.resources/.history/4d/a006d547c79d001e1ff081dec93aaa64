@@ -1,0 +1,29 @@
+package com.sunbeam.dao.moviedao;
+
+import java.util.List;
+
+import com.sunbeam.dao.MoviesDao;
+import com.sunbeam.pojo.Movie;
+
+public class MovieDao implements MoviesDao {
+
+	@Override
+	public List<Movie> findAll() throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Movie findById(int id) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void close() throws Exception {
+		// TODO Auto-generated method stub
+		
+		
+	}
+    
+}

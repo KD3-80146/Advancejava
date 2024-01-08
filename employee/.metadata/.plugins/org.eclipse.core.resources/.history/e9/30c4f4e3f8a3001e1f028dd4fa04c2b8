@@ -1,0 +1,23 @@
+package com.sunbeam.test;
+import static com.sunbeam.util.HibernateUtil.getFactory;
+
+import java.util.Scanner;
+
+import org.hibernate.SessionFactory;
+
+import com.sunbeam.dao.EmployeeDaoImpl;
+import com.sunbeam.pojos.EmploymentType;
+
+public class GetLastNameByEmpType {
+	public static void main(String [] args) {
+		try(SessionFactory session=getFactory();Scanner sc=new Scanner(System.in)){
+			 EmployeeDaoImpl emp= new EmployeeDaoImpl();
+			 System.out.println("Enter employee type ");
+			 emp.getLastNameByEmpType(
+			   EmploymentType.valueOf(sc.next().toUpperCase())).forEach(e->System.out.println(e));
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+}

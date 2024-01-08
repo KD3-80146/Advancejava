@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\Users\Ujjwal kumar\Desktop\IplTeam\spring-hibernate-templates"/>
+			<item value="C:\Users\Ujjwal kumar\Desktop\IplTeam\spring-web-mvc-help"/>
+			<item value="C:\Users\Ujjwal kumar\Desktop\IplTeam\day12_spring_mvc"/>
+			<item value="C:\Users\Ujjwal kumar\Desktop\IplTeam\day11_ER_practice"/>
+			<item value="C:\Users\Ujjwal kumar\Desktop\IplTeam\test_spring\test_spring"/>
+			<item value="C:\Users\Ujjwal kumar\Desktop\IplTeam\web_maven_hibernate\web_maven_hibernate"/>
+			<item value="F:\webjava\test_hibernate_basic"/>
+			<item value="F:\webjava"/>
+			<item value="F:\apache-tomcat-9.0.36\apache-tomcat-9.0.36"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+</section>

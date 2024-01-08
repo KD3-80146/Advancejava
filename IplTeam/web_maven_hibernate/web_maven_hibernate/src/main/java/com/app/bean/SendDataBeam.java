@@ -1,0 +1,90 @@
+package com.app.bean;
+
+import java.time.LocalDate;
+import java.time.Period;
+import java.util.List;
+
+import com.app.dao.PlayerDao;
+import com.app.dao.PlayerDaoImpl;
+import com.app.dao.TeamDao;
+import com.app.dao.TeamDaoImpl;
+import com.app.pojos.Player;
+import com.app.pojos.Team;
+
+public class SendDataBeam {
+
+	private String firstName;
+	private String lastName;
+	private String dob;
+	private double avg;
+	private int wickets;
+	private int myTeam;
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public String getDob() {
+		return dob;
+	}
+
+	public void setDob(String dob) {
+		this.dob = dob;
+	}
+
+	public double getAvg() {
+		return avg;
+	}
+
+	public void setAvg(double avg) {
+		this.avg = avg;
+	}
+
+	public int getWickets() {
+		return wickets;
+	}
+
+	public void setWickets(int wickets) {
+		this.wickets = wickets;
+	}
+
+	public int getMyTeam() {
+		return myTeam;
+	}
+
+	public void setMyTeam(int myTeam) {
+		this.myTeam = myTeam;
+	}
+
+	public String addPlayer() {
+		String msg = "Data not added";
+		TeamDao teamDao = new TeamDaoImpl();
+		Team team = teamDao.displayTeamById(myTeam);
+		int age = Period.between(LocalDate.parse(dob), LocalDate.now()).getYears();
+		if (age <= team.getMaxAge() && this.wickets >= team.getWicketsTaken() && this.avg >= team.getMaxAge()) {
+			PlayerDao pDao = new PlayerDaoImpl();
+			Player play = new Player(firstName, lastName, LocalDate.parse(dob), avg, wickets);
+			System.out.println(play);
+			int count = pDao.addPlayer(myTeam, play);
+
+			if (count == 1) {
+				msg = "data Added";
+			}
+		}
+
+		return msg;
+	}
+
+}

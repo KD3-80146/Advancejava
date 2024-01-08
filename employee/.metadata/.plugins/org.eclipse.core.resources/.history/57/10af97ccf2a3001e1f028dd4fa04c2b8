@@ -1,0 +1,14 @@
+package com.sunbeam.dao;
+
+import java.util.List;
+
+import com.sunbeam.pojos.Employee;
+
+
+
+public interface EmployeeDao {
+   String addEmployeeDetails(Employee newEmp);
+   
+   Employee getEmployeeById(Integer empId);
+   List<Employee> getAllEmps();
+}

@@ -1,0 +1,23 @@
+package com.app.pojos;
+
+import javax.persistence.*;
+
+@Entity
+public class Team {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="team_id")
+   private Integer teamId;
+	@Column(length=20)
+   private String name;
+	@Column(length=20)
+   private String abbrevation;
+	@Column(length=20)
+   private String owner;
+	@Column(name="max_age",length=40)
+   private int maxAge;
+	@Column(name="batting_ayg")
+   private double battingAvg;
+	@Column(name="wickets_taken")
+   private int wicketsTaken;
+}

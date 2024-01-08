@@ -1,0 +1,77 @@
+package com.sunbeam.bean;
+
+import com.sunbeam.daos.CandidateDao;
+import com.sunbeam.daos.CandidateDaoImpl;
+import com.sunbeam.daos.UserDao;
+import com.sunbeam.daos.UserDaoImpl;
+import com.sunbeam.pojos.User;
+
+public class VoteBean {
+     private int candId;
+     private int userId;
+     private String message;
+     
+   
+     
+	public VoteBean() {
+
+	}
+	public int getCandId() {
+		return candId;
+	}
+	public void setCandId(int candId) {
+		this.candId = candId;
+	}
+	public int getUserId() {
+		return userId;
+	}
+	public void setUserId(int userId) {
+		this.userId = userId;
+	}
+	
+	
+	
+	public String getMessage() {
+		return message;
+	}
+	public void setMessage(String message) {
+		this.message = message;
+	}
+	public void registerVote()
+	{
+		try(UserDao uDao=new UserDaoImpl())
+		{
+			User user=uDao.findById(candId);
+			System.out.println(user);
+			if(user.getStatus()!=0)
+			{
+				this.message="you Have alrady Voted";
+				return;
+			}
+			try(CandidateDao cDao=new CandidateDaoImpl())
+			{
+				int count=cDao.incrementVote(candId);
+				System.out.println(count);
+				if(count==1)
+				{
+					count=uDao.updateStatus(userId, true);
+					if(count==1)
+					{
+						this.message="you vote is Registered ";
+						
+					}
+					if(count==0)
+					{
+						this.message="voting Failed";
+					}
+				}
+			}
+			
+			
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+     
+     
+}

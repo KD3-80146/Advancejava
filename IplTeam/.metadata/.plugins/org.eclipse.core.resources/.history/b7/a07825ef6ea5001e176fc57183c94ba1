@@ -1,0 +1,26 @@
+package com.app.bean;
+
+import java.time.LocalDate;
+
+import com.app.dao.PlayerDao;
+
+public class SendDataBeam {
+	
+	   private String firstName;
+	   private String lastName;
+	   private LocalDate dob;
+	   private double avg;
+	  private int wickets;
+	  private int myTeam;
+	
+	  
+	  
+	public String addPlayer() {
+		
+		return null;
+	}
+	   
+	   
+	   
+
+}

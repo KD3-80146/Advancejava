@@ -1,0 +1,12 @@
+package com.app.dao;
+
+import java.util.List;
+import com.app.pojos.Team;
+
+
+public interface TeamDao {
+     String addNewTeam(Team newTeam);
+     List<Team> displayTeamID();
+     Team displayTeamById(Integer id);
+     List<Team>
+}

@@ -1,0 +1,19 @@
+package com.sunbeam.dao;
+
+import java.time.LocalDate;
+import java.util.List;
+
+import com.sunbeam.pojos.Employee;
+import com.sunbeam.pojos.EmploymentType;
+
+
+
+public interface EmployeeDao {
+   String addEmployeeDetails(Employee newEmp);
+   
+   Employee getEmployeeById(Integer empId);
+   List<Employee> getAllEmps();
+   List<Employee> getAllEmployeeByJoiningDate(LocalDate start,LocalDate end ,double minSalary);
+   List<String> getLastNameByEmpType(EmploymentType type);
+   List<Employee> getAllEmployeeType(EmploymentType type);
+}

@@ -1,0 +1,24 @@
+package com.app.tester;
+import static com.app.utils.Dbutil.getFactory;
+
+import java.util.Scanner;
+
+import org.hibernate.SessionFactory;
+import com.app.dao.TeamDaoImpl;
+import com.app.pojos.Team;
+
+
+
+public class GetByTeamId {
+	public static void main(String[] args) {
+		try(SessionFactory sf=getFactory();Scanner sc=new Scanner(System.in)){
+      		TeamDaoImpl team=new TeamDaoImpl();
+      		System.out.println("Enter team id ");
+      		Team t=team.DisplayTeamById(sc.nextInt());
+      		System.out.println(t.toString());
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+}

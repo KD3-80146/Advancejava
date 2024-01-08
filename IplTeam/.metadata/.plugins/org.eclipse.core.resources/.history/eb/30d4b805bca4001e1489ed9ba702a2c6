@@ -1,0 +1,27 @@
+package com.app.bean;
+
+import java.util.List;
+
+import com.app.dao.TeamDao;
+import com.app.dao.TeamDaoImpl;
+import com.app.pojos.Team;
+
+public class TeamBean {
+	 private TeamDao teamDao;
+	 
+	 public TeamBean() {
+		 teamDao = new TeamDaoImpl();
+		 System.out.println("Team bean is created");
+	}
+	 
+	 
+	
+	public List<Team> displyAllTeam(){
+		
+		 List<Team> list=teamDao.displayTeamID();
+		 System.out.println(list);
+		 
+		return list;
+	}
+
+}

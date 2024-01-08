@@ -1,0 +1,24 @@
+
+Dec 20, 2023 13:30:28.520 NEW SESSION
+Dec 20, 2023 13:30:28.520 [11596:10208:1220/133028.511:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -105
+Dec 20, 2023 13:30:29.706 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Dec 20, 2023 13:30:53.904 [11596:10208:1220/133053.903:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -109
+Dec 20, 2023 13:31:03.661 [11596:9920:1220/133103.661:ERROR:device_event_log_impl.cc(192)] [13:31:03.687] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: Element not found. (0x490)
+Dec 20, 2023 13:31:09.437 [11596:10208:1220/133109.437:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Dec 20, 2023 13:31:14.723 [11596:10208:1220/133114.723:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -109
+Dec 20, 2023 13:42:30.31 [11596:10208:1220/134230.030:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Dec 20, 2023 13:42:36.716 [11596:10208:1220/134236.716:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -109
+Dec 20, 2023 13:42:49.712 [11596:10208:1220/134249.711:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -109
+Dec 20, 2023 13:46:02.704 [11596:10208:1220/134602.703:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Dec 20, 2023 13:46:09.240 [11596:10208:1220/134609.238:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -109
+Dec 20, 2023 13:48:29.582 [11596:10208:1220/134829.581:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -109
+Dec 20, 2023 13:50:43.286 [11596:10208:1220/135043.285:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -109
+Dec 20, 2023 13:53:46.80 [11596:10208:1220/135346.078:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -109
+Dec 20, 2023 13:56:05.282 [11596:10208:1220/135605.281:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -109
+Dec 20, 2023 13:58:25.279 [11596:10208:1220/135825.277:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -109
+Dec 20, 2023 14:00:45.797 [11596:10208:1220/140045.795:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -109
+Dec 20, 2023 14:03:05.283 [11596:10208:1220/140305.282:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -109
+Dec 20, 2023 14:04:05.659 [11596:9920:1220/140405.658:ERROR:device_event_log_impl.cc(192)] [14:04:05.657] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: Element not found. (0x490)
+Dec 20, 2023 14:04:09.982 [11596:10208:1220/140409.982:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Dec 20, 2023 14:04:14.713 [11596:10208:1220/140414.713:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -109
+Dec 20, 2023 14:57:35.460 [12648:4420:1220/145735.460:ERROR:get_updates_processor.cc(263)] PostClientToServerMessage() failed during GetUpdates with error Network error (ERR_ABORTED)

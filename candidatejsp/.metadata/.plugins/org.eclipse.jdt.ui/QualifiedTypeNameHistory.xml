@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
+    <fullyQualifiedTypeName name="com.sunbeam.bean.CandidateListBean"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="com.sunbeam.daos.UserDao"/>
+    <fullyQualifiedTypeName name="com.sunbeam.daos.UserDaoImpl"/>
+    <fullyQualifiedTypeName name="com.sunbeam.pojos.User"/>
+    <fullyQualifiedTypeName name="com.sunbeam.daos.CandidateDao"/>
+    <fullyQualifiedTypeName name="com.sunbeam.daos.CandidateDaoImpl"/>
+    <fullyQualifiedTypeName name="com.sunbeam.bean.UpdateCandidateBean"/>
+    <fullyQualifiedTypeName name="com.sunbeam.pojos.Candidate"/>
+</qualifiedTypeNameHistroy>

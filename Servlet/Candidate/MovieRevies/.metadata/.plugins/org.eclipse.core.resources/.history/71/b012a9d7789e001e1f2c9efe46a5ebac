@@ -1,0 +1,7 @@
+package com.sunbeam.dao;
+
+import org.eclipse.jdt.internal.compiler.env.AutomaticModuleNaming;
+
+public class ReviewDao  extends Auto{
+
+}
